@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult ADHD Self-Report Scale (ASRS-v1.1)</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe8e1;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffc4d1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #444;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px 12px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            appearance: none;
+            background-color: #fff;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Adult ADHD Self-Report Scale (ASRS-v1.1)</h2>
+    <p>This test is for informational purposes only and is not a substitute for professional medical advice.</p>
+
+    <form id="adhdForm">
+        <div class="question">
+            <p>1. How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?</p>
+            <select name="q1">
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Very Often</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>2. How often do you have difficulty getting things in order when you have to do a task that requires organization?</p>
+            <select name="q2">
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Very Often</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>3. How often do you have problems remembering appointments or obligations?</p>
+            <select name="q3">
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Very Often</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>4. When you have a task that requires a lot of thought, how often do you avoid or delay getting started?</p>
+            <select name="q4">
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Very Often</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>5. How often do you fidget or squirm with your hands or feet when you have to sit down for a long time?</p>
+            <select name="q5">
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Very Often</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>6. How often do you feel overly active and compelled to do things, like you were driven by a motor?</p>
+            <select name="q6">
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Often</option>
+                <option value="4">Very Often</option>
+            </select>
+        </div>
+
+        <!-- ... Continue with the rest of the ASRS-v1.1 questions ... -->
+
+        <button type="button" onclick="calculateScore()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    function calculateScore() {
+        const form = document.getElementById('adhdForm');
+        let score = 0;
+
+        for (let i = 0; i < form.elements.length; i++) {
+            if (form.elements[i].tagName === 'SELECT') {
+                score += parseInt(form.elements[i].value);
+            }
+        }
+
+        const result = document.getElementById('result');
+        if (score < 10) {
+            result.textContent = "Your score suggests minimal symptoms of ADHD.";
+        } else if (score < 20) {
+            result.textContent = "Your score suggests mild symptoms of ADHD.";
+        } else if (score < 30) {
+            result.textContent = "Your score suggests moderate symptoms of ADHD.";
+        } else {
+            result.textContent = "Your score suggests severe symptoms of ADHD. Please seek professional help.";
+        }
+    }
+</script>
+
+</body>
+</html>

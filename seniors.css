@@ -1,0 +1,63 @@
+#div1{
+    background-color: #5a189a;
+    margin: auto;
+}
+
+#p1{
+    color: #e0aaff;
+    text-align: center;
+    font-weight: normal;
+    margin: 0px;
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 2.625em;
+	line-height: 1.5;
+	font-weight: 300;
+}
+#p1:hover{
+    text-decoration: underline;
+}
+
+#i1{
+    opacity: 0.5;
+    width: 50%;
+    height: 500px;
+}
+#i2{
+    opacity: 0.5;
+    width: 49%;
+    height: 500px;
+}
+#div2{
+    color: #e0aaff;
+    background-color: #5a189a;
+    margin: 0px;
+    padding-top: 50px;
+}
+#p2{
+    font-size: 40px;
+    margin: 0px;
+    color: #e0aaff;
+    background-color: #5a189a;
+    text-align: center;
+    font-weight: normal;
+}
+#p2:hover{
+    text-decoration: underline;
+}
+/* #p3 :hover{
+    text-decoration-line: underline ;
+} */
+#div3{
+    color: #e0aaff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    background-color: #5a189a;
+    margin: 0px;
+    padding-top: 25px;
+    line-height: 2.5;
+}
+#name ,#email ,#college,#branch,#b2{
+    background-color: #5a189a;
+    color: #e0aaff;
+}

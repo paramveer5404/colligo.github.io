@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a Test</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            overflow: hidden; /* Prevent scrolling when the overlay is displayed */
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffe8e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal {
+            background-color: #ffc4d1;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .test-description {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .test-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+
+        .test-option {
+            display: block;
+            width: 100%;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .test-option:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <div class="modal">
+        <h2>Select a Test</h2>
+
+        <div class="test-description">
+            <div class="test-title">GAD Test</div>
+            <p>The Generalized Anxiety Disorder (GAD) test helps in identifying symptoms of generalized anxiety disorder.</p>
+            <button class="test-option" onclick="location.href='gad-test.html'">Take the GAD Test</button>
+        </div>
+
+        <div class="test-description">
+            <div class="test-title">Depression Test</div>
+            <p>The PHQ-9 Depression Test is a tool that helps in assessing the severity of depressive symptoms.</p>
+            <button class="test-option" onclick="location.href='depression-test.html'">Take the Depression Test</button>
+        </div>
+
+        <div class="test-description">
+            <div class="test-title">ADHD Test</div>
+            <p>This test can help in identifying symptoms of Attention Deficit Hyperactivity Disorder (ADHD) in adults.</p>
+            <button class="test-option" onclick="location.href='adhd-test.html'">Take the ADHD Test</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

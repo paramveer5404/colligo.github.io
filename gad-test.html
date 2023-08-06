@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAD-7 Test</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe8e1;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffc4d1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #444;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px 12px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            appearance: none;
+            background-color: #fff;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Generalized Anxiety Disorder (GAD-7) Test</h2>
+    <p>This test is for informational purposes only and is not a substitute for professional medical advice.</p>
+
+    <form id="gad7Form">
+        <div class="question">
+            <p>1. Feeling nervous, anxious, or on edge?</p>
+            <select name="q1">
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>2. Not being able to stop or control worrying?</p>
+            <select name="q2">
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>3. Worrying too much about different things?</p>
+            <select name="q3">
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>4. Trouble relaxing?</p>
+            <select name="q4">
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>5. Being so restless that it's hard to sit still?</p>
+            <select name="q5">
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>6. Becoming easily annoyed or irritable?</p>
+            <select name="q6">
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+            </select>
+        </div>
+        <div class="question">
+            <p>7. Feeling afraid as if something awful might happen?</p>
+            <select name="q7">
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+            </select>
+        </div>
+    
+        <button type="button" onclick="calculateScore()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    function calculateScore() {
+        const form = document.getElementById('gad7Form');
+        let score = 0;
+
+        for (let i = 0; i < form.elements.length; i++) {
+            if (form.elements[i].tagName === 'SELECT') {
+                score += parseInt(form.elements[i].value);
+            }
+        }
+
+        const result = document.getElementById('result');
+        if (score < 5) {
+            result.textContent = "Your score suggests minimal anxiety.";
+        } else if (score < 10) {
+            result.textContent = "Your score suggests mild anxiety.";
+        } else if (score < 15) {
+            result.textContent = "Your score suggests moderate anxiety.";
+        } else {
+            result.textContent = "Your score suggests severe anxiety. Please seek professional help.";
+        }
+    }
+</script>
+</body>
+</html>

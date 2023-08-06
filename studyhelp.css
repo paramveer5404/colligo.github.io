@@ -1,0 +1,153 @@
+#div1{
+    background-color: #5a189a;
+    margin: auto;
+}
+
+#p1{
+    color: #e0aaff;
+    text-align: center;
+    /* font-weight: normal; */
+    /* font-size: 60px; */
+    margin: 0px;
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 2.625em;
+	line-height: 1.3;
+	/* margin: 0; */
+	font-weight: 300;
+}
+/* #p1:hover{
+    text-decoration: underline;
+} */
+
+#i1{
+    opacity: 0.5;
+    width: 50%;
+}
+#i2{
+    opacity: 0.5;
+    width: 49%;
+}
+/* #div2,#div3{
+    background-color: #5a189a;
+} */
+#div2{
+    color: #e0aaff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    background-color: #5a189a;
+    margin: 0px;
+    padding-top: 50px;
+
+}
+#p2{
+    margin: 0px;
+}
+#p2:hover{
+    text-decoration: underline;
+}
+#div3{
+    color: #e0aaff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    background-color: #5a189a;
+    margin: 0px;
+    padding-top: 25px;
+}
+#p3{
+    margin: 0px;
+    line-height: 1.5;
+}
+#div4{
+    color: #e0aaff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    background-color: #5a189a;
+    margin: 0px;
+    padding-top: 50px;
+}
+#div4:hover{
+    text-decoration: underline;
+}
+#div5{
+    color: #e0aaff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    background-color: #5a189a;
+    margin: 0px;
+    padding-top: 25px;
+    line-height: 2.5;
+}
+#college{
+    background-color: #5a189a;
+    color: #e0aaff;
+}
+#b1{
+    background-color: #5a189a;
+    color: #e0aaff;
+}
+#div6{
+    color: #e0aaff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    background-color: #5a189a;
+    margin: 0px;
+    padding-top: 50px;
+}
+#div6:hover{
+    text-decoration: underline;
+}
+#div10{
+    background-color: #5a189a;
+    padding-top: 50px;
+}
+#div11{
+    text-align: left;
+    width: 33%;
+}
+#div12{
+    text-align: center;
+    width: 33%;
+}
+#div13{
+    text-align: right;
+    width: 33%;
+}
+#div11,#div12,#div13{
+    display: inline-block;
+    background-color: #5a189a;
+    color: #e0aaff;
+}
+#div_contri_a{
+    color: #e0aaff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    background-color: #5a189a;
+    margin: 0px;
+    padding-top: 25px;
+}
+#div_contri_a:hover{
+        text-decoration: underline;
+}
+#p4{
+    margin: 0px;
+}
+#div_contri_b{
+    color: #e0aaff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    background-color: #5a189a;
+    margin: 0px;
+    padding-top: 25px;
+    line-height: 2.5;
+}
+#branchtocontri , #documentation ,#semester , #myFile ,#bt{
+    background-color: #5a189a;
+    color: #e0aaff;
+}
